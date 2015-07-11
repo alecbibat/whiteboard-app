@@ -1,3 +1,3 @@
-PostitTemplate::Application.routes.draw do
+Whiteboards::Application.routes.draw do
   root to: 'static#index'
 end
