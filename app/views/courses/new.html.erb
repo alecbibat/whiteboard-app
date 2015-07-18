@@ -1,0 +1,18 @@
+<p>Put 'register a new course' form here.</p>
+
+<div class="span8 well">
+  <%= form_for @course do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :abbreviation %>
+  <%= f.text_field :abbreviation %>
+
+  <%= f.submit "Register course" %>
+
+  <% end %>
+</div>
+
+
+
