@@ -1,9 +1,18 @@
 <p>This is the courses page!</p>
 
-<%= link_to "Register a new course", new_course_path, class: 'btn btn-success' %>
-
+<div class="control-group">
 <div class="span8 well">
+  <div class='lead'>
+  </div>
+<div class="control-group">
+<%= link_to "Register a new course", new_course_path, class: 'btn btn-success' %>
+</div>
+  <div class='lead'>
+    All Courses
+  </div>
 <% @courses.each do |course| %>
   <%= course %>
+  </hr>
 <% end %>
+</div>
 </div>
