@@ -1,18 +1,17 @@
-<p>This is the courses page!</p>
+<p class="lead"> All Courses </p>
+
+<hr>
 
 <div class="control-group">
-<div class="span8 well">
-  <div class='lead'>
-  </div>
-<div class="control-group">
-<%= link_to "Register a new course", new_course_path, class: 'btn btn-success' %>
+  <%= link_to "Register a new course", new_course_path, class: 'btn btn-success' %>
 </div>
-  <div class='lead'>
-    All Courses
-  </div>
+
 <% @courses.each do |course| %>
-  <%= course %>
-  </hr>
+<%= link_to course_path(course) do %>
+  <div class="span8 well">
+    <%= course.name %>
+    <br>
+    <%= course.abbreviation %>
+  </div>
+  <% end %>
 <% end %>
-</div>
-</div>
