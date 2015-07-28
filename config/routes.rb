@@ -4,4 +4,6 @@ Whiteboards::Application.routes.draw do
   resources :users
 
   resources :courses
+
+  resources :threads
 end
