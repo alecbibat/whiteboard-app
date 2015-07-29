@@ -1,1 +1,29 @@
 <p class="lead"> <%= @course.name %> </p>
+
+<div class='span8 well'>
+<%= form_for @thread do |f| %>
+
+<div class="control-group">
+<%= f.label :title %>
+<%= f.text_field :title %>
+</div>
+
+<div class="control-group">
+<%= f.label :description %>
+<%= f.text_area :description %>
+</div>
+
+<div class="control-group">
+<%= f.submit "Create Thread", class: "btn btn-primary" %>
+</div>
+
+<% end %>
+</div>
+
+<hr>
+
+<% @course.threads.reload.each do |thread| %>
+  <div class="span8 well">
+    <%= thread.description %>
+  </div>
+<% end %>
