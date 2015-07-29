@@ -5,5 +5,5 @@ Whiteboards::Application.routes.draw do
 
   resources :courses
 
-  resources :threads
+  resources :posts
 end
