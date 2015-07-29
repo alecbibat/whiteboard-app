@@ -26,6 +26,6 @@
   <div class="span8 well">
     <h4><%= post.title %></h4>
     <p><%= post.description %></p>
-    <p class="small quiet">created at <%= post.created_at %> by post.user.username</p>
+    <p class="small quiet">created at <%= datetime(post.created_at) %> by post.user.username</p>
   </div>
 <% end %>
