@@ -6,7 +6,6 @@ class CoursesController < ApplicationController
   def show
     # handle individual course pages
     @course = Course.find(params[:id])
-    binding.pry
     @post = Post.new()
   end
 
