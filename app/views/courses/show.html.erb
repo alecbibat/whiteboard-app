@@ -1,6 +1,7 @@
-<p class="lead"> <%= @course.name %> </p>
-
 <div class='span8 well'>
+
+<h4> <%= @course.name %> </h4>
+<p class="quiet"> <%= @course.department %> | <%= @course.number %> </p>
 <%= form_for @post do |f| %>
 
 <div class="control-group">
@@ -19,8 +20,6 @@
 
 <% end %>
 </div>
-
-<hr>
 
 <% @course.posts.reload.each do |post| %>
   <div class="span8 well">
