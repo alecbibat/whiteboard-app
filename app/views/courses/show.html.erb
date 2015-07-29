@@ -1,7 +1,7 @@
 <p class="lead"> <%= @course.name %> </p>
 
 <div class='span8 well'>
-<%= form_for @thread do |f| %>
+<%= form_for @post do |f| %>
 
 <div class="control-group">
 <%= f.label :title %>
@@ -22,8 +22,8 @@
 
 <hr>
 
-<% @course.threads.reload.each do |thread| %>
+<% @course.posts.reload.each do |post| %>
   <div class="span8 well">
-    <%= thread.description %>
+    <%= post.description %>
   </div>
 <% end %>

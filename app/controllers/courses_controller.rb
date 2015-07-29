@@ -6,7 +6,8 @@ class CoursesController < ApplicationController
   def show
     # handle individual course pages
     @course = Course.find(params[:id])
-    @thread = Thread.new()
+    binding.pry
+    @post = Post.new()
   end
 
   def new
