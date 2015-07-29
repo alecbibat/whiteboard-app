@@ -24,6 +24,8 @@
 
 <% @course.posts.reload.each do |post| %>
   <div class="span8 well">
+    <%= post.title %>
     <%= post.description %>
+    <%= post.created_at %>
   </div>
 <% end %>
