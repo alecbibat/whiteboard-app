@@ -4,13 +4,18 @@
   <%= form_for @course do |f| %>
 
   <div class="control-group">
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :placeholder => "Foundations of Modern Physics" %>
   </div>
 
   <div class="control-group">
-  <%= f.label :abbreviation %>
-  <%= f.text_field :abbreviation %>
+    <%= f.label :department %>
+    <%= f.text_field :department, :placeholder => "PHYS" %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :number %>
+    <%= f.text_field :number, :placeholder => 2170 %>
   </div>
 
   <div class="control-group">

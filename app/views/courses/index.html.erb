@@ -8,10 +8,12 @@
 
 <% @courses.each do |course| %>
 <%= link_to course_path(course) do %>
-  <div class="span8 well">
+  <div class="span4 well">
     <%= course.name %>
     <br>
-    <%= course.abbreviation %>
+    <%= course.department %>
+    <%= course.number %>
+    <p><%= course.users.size %> students </p>
   </div>
   <% end %>
 <% end %>
