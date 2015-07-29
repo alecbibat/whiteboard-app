@@ -3,7 +3,8 @@ Whiteboards::Application.routes.draw do
 
   resources :users
 
-  resources :courses
-
-  resources :posts
+  resources :courses do
+    resources :posts
+  end
+  
 end
