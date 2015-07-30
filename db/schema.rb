@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150729221553) do
+ActiveRecord::Schema.define(version: 20150730002833) do
 
   create_table "comments", force: true do |t|
     t.text     "body"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20150729221553) do
     t.datetime "updated_at"
     t.integer  "user_course_id"
     t.string   "email"
+    t.string   "password_digest"
   end
 
 end
