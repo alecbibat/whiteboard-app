@@ -5,8 +5,12 @@ class CoursesController < ApplicationController
 
   def show
     # handle individual course pages
+    if session[:user] == nil
+      redirect_to courses_path
+    else
     @course = Course.find(params[:id])
     @post = Post.new()
+    end
   end
 
   def new

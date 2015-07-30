@@ -3,6 +3,8 @@
 <h4> <%= @course.name %> </h4>
 <p class="quiet"> <%= @course.department %> | <%= @course.number %> </p>
 
+<%= render 'shared/errors', obj: @post %>
+
 <%= form_for [@course, @post] do |f| %>
 
 <div class="control-group">

@@ -1,5 +1,7 @@
 <p class='lead'>Register a New Course</p>
 
+<%= render 'shared/errors', obj: @course %>
+
 <div class="span8 well">
   <%= form_for @course do |f| %>
 

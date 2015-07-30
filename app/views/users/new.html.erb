@@ -3,6 +3,8 @@
   Create an Account
 </div>
 
+<%= render 'shared/errors', obj: @user %>
+
   <%= form_for @user do |f| %>
 
   <%= f.label :username %>
