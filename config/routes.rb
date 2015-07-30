@@ -6,5 +6,6 @@ Whiteboards::Application.routes.draw do
   resources :courses do
     resources :posts
   end
-  
+
+  resources :sessions
 end
