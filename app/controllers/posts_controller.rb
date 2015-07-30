@@ -4,13 +4,14 @@ class PostsController < ApplicationController
     # handle new thread submission
     @course = Course.find(params[:course_id])
     @post = @course.posts.build(post_params)
-    @post.user = User.first()
+    @post.user = User.find_by(id: session[:user].id)
 
     if @post.save
       redirect_to course_path(@course)
     else
       redirect_to root_path
     end
+
   end
 
   def post_params
