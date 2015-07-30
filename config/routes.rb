@@ -7,5 +7,6 @@ Whiteboards::Application.routes.draw do
     resources :posts
   end
 
-  resources :sessions
+  resources :sessions, only: [:new, :create]
+  delete 'logout' => 'sessions#destroy'
 end
