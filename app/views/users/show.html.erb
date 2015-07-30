@@ -1,0 +1,7 @@
+<div class="span4 well">
+  <% @user = User.find_by(id: session[:user].id) %>
+    <p class="lead"><%= @user.username %>
+    <p>Email: <%= @user.email %></p>
+    <p>Member since: <%= datetime(@user.created_at) %>
+    <p>Posts <%= @user.posts.size %></p>  
+</div>

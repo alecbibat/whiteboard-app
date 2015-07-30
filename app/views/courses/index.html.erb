@@ -8,6 +8,7 @@
 
 <% @courses.each do |course| %>
 <%= link_to course_path(course) do %>
+<div class="control-group">
   <div class="span4 well">
     <%= course.name %>
     <br>
@@ -15,5 +16,6 @@
     <%= course.number %>
     <p><%= course.users.size %> students </p>
   </div>
+</div>
   <% end %>
 <% end %>

@@ -5,10 +5,16 @@
   <li>
     <%= link_to 'Course List', courses_path %>
   </li>
-  <li>
-    <%= link_to 'Profile', '' %>
-  </li>
+
+  <% if session[:user] != nil %>
+      <li><%= link_to "Profile", user_path(User.find_by(id: session[:user])) %></li>
+  <% else %>
+  <% end %>
+
+  <% if session[:user] != nil %>
   <li>
     <%= link_to 'Logout', logout_path, method: 'delete' %>
   </li>
+  <% else %>
+  <% end %>
 </ul>
