@@ -29,3 +29,10 @@
     <p class="small quiet">created at <%= datetime(post.created_at) %> by <%= post.user.username %></p>
   </div>
 <% end %>
+
+<% if @course.posts.empty? %>
+  <div class="span8 well">
+    <h3>There aren't any posts yet!</h3>
+  </div>
+  <% else %>
+  <% end %>
