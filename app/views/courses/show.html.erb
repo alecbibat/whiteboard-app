@@ -25,11 +25,13 @@
 </div>
 
 <% @course.posts.reload.each do |post| %>
+  <%= link_to course_post_path(params[:id], @course.id) do %>
   <div class="span8 well">
     <h4><%= post.title %></h4>
     <p><%= post.description %></p>
     <p class="small quiet">created at <%= datetime(post.created_at) %> by <%= post.user.username %></p>
   </div>
+  <% end %>
 <% end %>
 
 <% if @course.posts.empty? %>
