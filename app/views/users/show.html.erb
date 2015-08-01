@@ -3,5 +3,18 @@
     <p class="lead"><%= @user.username %>
     <p>Email: <%= @user.email %></p>
     <p>Member since: <%= datetime(@user.created_at) %>
-    <p>Posts <%= @user.posts.size %></p>  
+    <p>Posts <%= @user.posts.size %></p>
+    <%= link_to 'My Posts', '#', class: 'btn btn-primary' %>
+    <%= link_to 'Favorited Posts', '#', class: 'btn btn-success' %>
+</div>
+
+<p class='lead'>My Posts</p>
+<% @user.posts.each do |post| %>
+<div class="span4 well">
+  <%= post.title %>
+  <%= post.description %>
+  <%= post.created_at %>
+  <%= post.course.department %>
+  <%= post.course.number %>
+  <% end %>
 </div>

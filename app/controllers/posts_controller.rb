@@ -1,5 +1,8 @@
 class PostsController < ApplicationController
 
+  def show
+  end
+
   def create
     # handle new thread submission
     @course = Course.find(params[:course_id])
@@ -13,6 +16,8 @@ class PostsController < ApplicationController
     end
 
   end
+
+  private
 
   def post_params
     params.require(:post).permit!
