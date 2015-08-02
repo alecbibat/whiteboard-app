@@ -1,3 +1,25 @@
-The show post page!
+<div class='control-group'>
+<%= link_to "Back to #{@post.course.name}", course_path(params[:course_id]), class: 'btn btn-warning' %>
+</div>
 
-You're viewing <%= @post %>
+<div class="span8 well">
+    <h5><%= @post.title %></h5>
+  <%= @post.description %>
+  <p class="small quiet"> posted in <%= @post.course.department %> <%= @post.course.number %> at <%= @post.created_at %>
+</div>
+
+<div class='span8 well'>
+  <h5>Leave a comment</h5>
+  <%= form_for [@course, @post, @comment] do |f| %>
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+<div class="span8 well">
+  <% @post.comments.each do |comment| %>
+  <%= comment.body %>
+  <% end %>
+</div>
