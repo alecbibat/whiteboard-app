@@ -3,14 +3,14 @@
     <p class="lead"><%= @user.username %>
     <p>Email: <%= @user.email %></p>
     <p>Member since: <%= datetime(@user.created_at) %>
-    <p>Posts <%= @user.posts.size %></p>
+    <p>Posts: <%= @user.posts.size %></p>
 </div>
 
 <p class='lead'>My Posts</p>
 
 <% @user.posts.each do |post| %>
 <div class="span8 well">
-  <h5><%= post.title %></h5>
+  <h5><%= link_to post.title, post_path(post) %></h5>
   <%= post.description %>
   <p class="small quiet"> posted in <%= post.course.department %> <%= post.course.number %> at <%= post.created_at %>
   </p>
