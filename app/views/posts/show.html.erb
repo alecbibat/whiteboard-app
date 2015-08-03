@@ -23,6 +23,6 @@
   <div class="span8 well">
     <p><%= comment.body %></p>
     <em class="small quiet"> - <%= comment.user.username %> at
-    <%= comment.created_at %></em>
+    <%= datetime(comment.created_at) %></em>
   </div>
 <% end %>
