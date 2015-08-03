@@ -7,6 +7,10 @@ Whiteboards::Application.routes.draw do
     resources :posts
   end
 
+  resources :posts do
+    resources :comments
+  end
+
   post 'post_comments' => 'comments#create'
 
   resources :sessions, only: [:new, :create]

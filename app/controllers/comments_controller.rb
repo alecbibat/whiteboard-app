@@ -1,8 +1,7 @@
 class CommentsController < ApplicationController
 
   def create
-    binding.pry
-    @post = Post.find(params[:id])
+    @post = Post.find(params[:post_id])
     @comment = @post.comments.build(comment_params)
     @comment.user = User.find_by(id: session[:user].id)
 
