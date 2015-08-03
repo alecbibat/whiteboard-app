@@ -18,8 +18,11 @@
   <% end %>
 </div>
 
-<div class="span8 well">
-  <% @post.comments.each do |comment| %>
-  <%= comment.body %>
-  <% end %>
-</div>
+
+<% @post.comments.each do |comment| %>
+  <div class="span8 well">
+    <p><%= comment.body %></p>
+    <em class="small quiet"> - <%= comment.user.username %> at
+    <%= comment.created_at %></em>
+  </div>
+<% end %>
