@@ -16,6 +16,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'coffee-script-source', '1.8.0'
+gem 'paperclip', '~> 4.3'
 
 group :doc do
   gem 'sdoc', require: false
