@@ -18,11 +18,16 @@
   <% end %>
 </div>
 
-
+<% if @post.comments.empty? %>
+  <div class="span8 well">
+    <h3>There aren't any comments yet!</h3>
+  </div>
+  <% else %>
 <% @post.comments.each do |comment| %>
   <div class="span8 well">
     <p><%= comment.body %></p>
     <em class="small quiet"> - <%= comment.user.username %> at
     <%= datetime(comment.created_at) %></em>
   </div>
+<% end %>
 <% end %>
