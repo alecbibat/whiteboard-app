@@ -17,5 +17,5 @@ Whiteboards::Application.routes.draw do
   delete 'logout' => 'sessions#destroy'
 
   post 'subscribe' => 'subscribed_courses#create'
-  delete 'unsubscribe' => 'subscribed_course#destroy'
+  delete 'unsubscribe' => 'subscribed_courses#destroy'
 end

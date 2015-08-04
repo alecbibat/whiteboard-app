@@ -16,6 +16,12 @@ class SubscribedCoursesController < ApplicationController
   end
 
   def destroy
+    @subscribed_course = SubscribedCourse.find(params[:format])
+    @subscribed_course.delete
+
+    # find what's in the params, make sure to delete the subscribed_courses object, not an attribute
+    redirect_to root_path
+
     # @subscribed_course = Subscribed_course.find_by
     # find entry where user_id and course_id are some value
     # how to find_by specifying two parameters

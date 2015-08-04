@@ -1,7 +1,8 @@
 <div class='span8 well'>
 
 <% if @course.subscribed_courses.any? and (@course.subscribed_courses.select {|x| x.user_id == session[:user].id}).any? %>
-  <%= link_to "Unsubscribe", '#', class: 'btn btn-danger' %>
+<% @subscribed_courses = @course.subscribed_courses.select {|x| x.user_id == session[:user].id} %>
+  <%= link_to "Unsubscribe", unsubscribe_path(@subscribed_courses), method: 'delete', class: 'btn btn-danger' %>
 <% else %>
   <%= link_to "Subscribe", subscribe_path(@course), method: 'post', class: 'btn btn-success' %>
 <% end %>
