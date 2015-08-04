@@ -1,7 +1,6 @@
 class SubscribedCoursesController < ApplicationController
 
   def create
-    binding.pry
     @course = Course.find(params[:format])
     @user = session[:user]
     @subscribed_course = @user.subscribed_courses.new()
@@ -17,6 +16,14 @@ class SubscribedCoursesController < ApplicationController
   end
 
   def destroy
+    # @subscribed_course = Subscribed_course.find_by
+    # find entry where user_id and course_id are some value
+    # how to find_by specifying two parameters
+    # if @subscribed_course.delete
+    # flash notice, redirect
+    # else
+    # flash error, redirect
+    # end
   end
 
 end

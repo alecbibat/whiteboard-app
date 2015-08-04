@@ -1,6 +1,15 @@
 <div class='span8 well'>
 
-<h4> <%= @course.name %> <%= link_to "Subscribe", subscribe_path(@course), method: 'post', class: 'btn btn-success' %> </h4>
+<% if @course.subscribed_courses.first == nil %>
+  <%= link_to "Subscribe", subscribe_path(@course), method: 'post', class: 'btn btn-success' %>
+<% elsif @course.subscribed_courses.first.user_id == session[:user].id %>
+  <%= link_to "Unsubscribe", '#', class: 'btn btn-danger' %>
+<% else %>
+  There's something wrong.
+<% end %>
+
+<h4><%= @course.name %></h4>
+
 <p class="quiet"> <%= @course.department %> | <%= @course.number %> </p>
 
 <%= render 'shared/errors', obj: @post %>
