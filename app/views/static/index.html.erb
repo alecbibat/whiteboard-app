@@ -1,4 +1,5 @@
-<div class="background_image">
+<% if session[:user] == nil %>
+
 <div align="center">
   <div class="span12 well">
   <div class="jumbotron">
@@ -9,4 +10,13 @@
   </div>
   </div>
 </div>
+
+<% else %>
+<p class='lead'>Subscribed Courses</p>
+<% session[:user].subscribed_courses.each do |sub| %>
+<div class='span8 well'>
+  <%= sub %>
 </div>
+<% end %>
+
+<% end %>
