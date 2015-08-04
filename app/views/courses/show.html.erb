@@ -1,11 +1,9 @@
 <div class='span8 well'>
 
-<% if @course.subscribed_courses.first == nil %>
-  <%= link_to "Subscribe", subscribe_path(@course), method: 'post', class: 'btn btn-success' %>
-<% elsif @course.subscribed_courses.first.user_id == session[:user].id %>
+<% if @course.subscribed_courses.any? and (@course.subscribed_courses.select {|x| x.user_id == session[:user].id}).any? %>
   <%= link_to "Unsubscribe", '#', class: 'btn btn-danger' %>
 <% else %>
-  There's something wrong.
+  <%= link_to "Subscribe", subscribe_path(@course), method: 'post', class: 'btn btn-success' %>
 <% end %>
 
 <h4><%= @course.name %></h4>
