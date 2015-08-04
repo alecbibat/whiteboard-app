@@ -13,6 +13,8 @@
 
 <%= render 'shared/errors', obj: @post %>
 
+<% if @course.subscribed_courses.any? and (@course.subscribed_courses.select {|x| x.user_id == session[:user].id}).any? %>
+
 <%= form_for [@course, @post] do |f| %>
 
 <div class="control-group">
@@ -47,4 +49,12 @@
     <h3>There aren't any posts yet!</h3>
   </div>
   <% else %>
+  <% end %>
+
+  <% else %>
+
+  <div class="span8 well">
+    <h5>You need to subscribe to participate in this course.</h5>
+  </div>
+
   <% end %>
