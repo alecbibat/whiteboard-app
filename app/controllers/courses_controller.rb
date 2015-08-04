@@ -5,7 +5,6 @@ class CoursesController < ApplicationController
 
   def show
     # handle individual course pages
-    binding.pry
     if session[:user] == nil
       flash[:error] = "You must be logged in to view a course."
       redirect_to courses_path

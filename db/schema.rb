@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150802055016) do
+ActiveRecord::Schema.define(version: 20150804001034) do
 
   create_table "comments", force: true do |t|
     t.text     "body"
@@ -38,6 +38,13 @@ ActiveRecord::Schema.define(version: 20150802055016) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.integer  "course_id"
+  end
+
+  create_table "subscribed_courses", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "course_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "user_courses", force: true do |t|
