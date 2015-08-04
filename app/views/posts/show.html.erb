@@ -5,7 +5,7 @@
 <div class="span8 well">
     <h5><%= @post.title %></h5>
   <%= @post.description %>
-  <p class="small quiet"> posted in <%= @post.course.department %> <%= @post.course.number %> at <%= @post.created_at %>
+  <p class="small quiet"> posted in <%= @post.course.department %> <%= @post.course.number %> at <%= @post.created_at %> by <%= @post.user.username %> </p>
 </div>
 
 <div class='span8 well'>

@@ -13,6 +13,7 @@
 
 <% else %>
 <p class='lead'>My Courses</p>
+<hr>
 <% session[:user].courses.each do |sub| %>
 <div class='span8 well'>
   <%= sub %>
