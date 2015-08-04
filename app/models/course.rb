@@ -1,6 +1,4 @@
 class Course < ActiveRecord::Base
-  has_many :user_courses
-  has_many :users, through: :user_courses
   has_many :posts
   has_many :subscribed_courses
   has_many :users, through: :subscribed_courses

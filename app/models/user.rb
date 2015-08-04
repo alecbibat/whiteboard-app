@@ -3,8 +3,6 @@ class User < ActiveRecord::Base
   validates_with EmailValidator
   has_many :posts
   has_many :comments
-  has_many :user_courses
-  has_many :courses, through: :user_courses
   has_many :subscribed_courses
   has_many :courses, through: :subscribed_courses
 

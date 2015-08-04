@@ -12,8 +12,8 @@
 </div>
 
 <% else %>
-<p class='lead'>Subscribed Courses</p>
-<% session[:user].subscribed_courses.each do |sub| %>
+<p class='lead'>My Courses</p>
+<% session[:user].courses.each do |sub| %>
 <div class='span8 well'>
   <%= sub %>
 </div>
