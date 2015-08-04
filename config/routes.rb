@@ -15,4 +15,7 @@ Whiteboards::Application.routes.draw do
 
   resources :sessions, only: [:new, :create]
   delete 'logout' => 'sessions#destroy'
+
+  post 'subscribe' => 'subscribed_courses#create'
+  delete 'unsubscribe' => 'subscribed_course#destroy'
 end

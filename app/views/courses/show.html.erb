@@ -1,6 +1,6 @@
 <div class='span8 well'>
 
-<h4> <%= @course.name %> </h4>
+<h4> <%= @course.name %> <%= link_to "Subscribe", subscribe_path(@course), method: 'post', class: 'btn btn-success' %> </h4>
 <p class="quiet"> <%= @course.department %> | <%= @course.number %> </p>
 
 <%= render 'shared/errors', obj: @post %>
