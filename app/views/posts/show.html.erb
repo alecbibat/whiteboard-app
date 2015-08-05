@@ -4,6 +4,9 @@
 
 <div class="span8 well">
     <h5><%= @post.title %></h5>
+    <div class="control-group">
+    <%= image_tag @post.photo_url() %>
+    </div>
   <%= @post.description %>
   <p class="small quiet"> posted in <%= @post.course.department %> <%= @post.course.number %> at <%= @post.created_at %> by <%= @post.user.username %> </p>
 </div>

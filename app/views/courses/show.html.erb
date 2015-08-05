@@ -11,6 +11,9 @@
 
 <p class="quiet"> <%= @course.department %> | <%= @course.number %> </p>
 
+</div>
+<div class="span8 well">
+
 <%= render 'shared/errors', obj: @post %>
 
 <% if @course.subscribed_courses.any? and (@course.subscribed_courses.select {|x| x.user_id == session[:user].id}).any? %>
@@ -42,6 +45,8 @@
   <%= link_to course_post_path(params[:id], post.id) do %>
   <div class="span8 well">
     <h4><%= post.title %></h4>
+    <% @image_url = "uploads/post/photo/#{post.id}" %>
+    <%= image_tag post.photo_url() %>
     <p><%= post.description %></p>
     <p class="small quiet">created at <%= datetime(post.created_at) %> by <%= post.user.username %></p>
   </div>
