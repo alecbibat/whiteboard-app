@@ -7,7 +7,6 @@ class PostsController < ApplicationController
 
   def create
     # handle new thread submission
-    binding.pry
     @course = Course.find(params[:course_id])
     @post = @course.posts.build(post_params)
     @post.user = User.find_by(id: session[:user].id)

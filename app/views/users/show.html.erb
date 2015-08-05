@@ -4,6 +4,7 @@
     <p>Email: <%= @user.email %></p>
     <p>Member since: <%= datetime(@user.created_at) %>
     <p>Posts: <%= @user.posts.size %></p>
+    <p>Post comments: <%= @user.comments.size %></p>
 </div>
 
 <p class='lead'>My Posts</p>
