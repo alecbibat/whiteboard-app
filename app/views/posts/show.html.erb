@@ -11,6 +11,8 @@
   <p class="small quiet"> posted in <%= @post.course.department %> <%= @post.course.number %> at <%= @post.created_at %> by <%= @post.user.username %> </p>
 </div>
 
+<%= render 'shared/errors', obj: @comment %>
+
 <div class='span8 well'>
   <h5>Leave a comment</h5>
   <%= form_for [@post, @comment] do |f| %>
