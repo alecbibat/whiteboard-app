@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to course_post_path(@post.course_id, params[:post_id])
     else
-      redirect_to root_path
+      render 'posts/show'
     end
   end
 

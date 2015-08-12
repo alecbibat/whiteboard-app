@@ -2,9 +2,9 @@
 
 <% if @course.subscribed_courses.any? and (@course.subscribed_courses.select {|x| x.user_id == session[:user].id}).any? %>
 <% @subscribed_courses = @course.subscribed_courses.select {|x| x.user_id == session[:user].id} %>
-  <%= link_to "Unsubscribe", unsubscribe_path(@subscribed_courses), method: 'delete', class: 'btn btn-danger' %>
+  <%= link_to "[Unsubscribe]", unsubscribe_path(@subscribed_courses), method: 'delete'%>
 <% else %>
-  <%= link_to "Subscribe", subscribe_path(@course), method: 'post', class: 'btn btn-success' %>
+  <%= link_to "[Subscribe]", subscribe_path(@course), method: 'post' %>
 <% end %>
 
 <h4><%= @course.name %></h4>
