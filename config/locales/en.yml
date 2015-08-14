@@ -21,3 +21,18 @@
 
 en:
   hello: "Hello world"
+  Mon: "Monday"
+  Tues: "Tuesday"
+  Wed: "Wednesday"
+  Thur: "Thursday"
+  Fri: "Friday"
+  Sat: "Saturday"
+  Sun: "Sunday"
+
+  Monday: ""
+  Tuesday: ""
+  Wednesday: ""
+  Thursday: ""
+  Friday: ""
+  Saturday: ""
+  Sunday: ""

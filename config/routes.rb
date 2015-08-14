@@ -16,7 +16,8 @@ Whiteboards::Application.routes.draw do
   resources :sessions, only: [:new, :create]
   delete 'logout' => 'sessions#destroy'
 
-  get 'calendar' => 'static#calendar'
+  get 'calendar' => 'calendar#show'
+  get 'new_calendar_item' => 'calendar#new'
 
   post 'subscribe' => 'subscribed_courses#create'
   delete 'unsubscribe' => 'subscribed_courses#destroy'
