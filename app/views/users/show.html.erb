@@ -1,5 +1,4 @@
 <div class="span5 well">
-  <% @user = User.find_by(id: session[:user].id) %>
     <p class="lead"><%= @user.username %>
     <p>Email: <%= @user.email %></p>
     <p>Member since: <%= datetime(@user.created_at) %>

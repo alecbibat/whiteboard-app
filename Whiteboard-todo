@@ -76,6 +76,7 @@ TODO:
     - User has_many quizzes
     - Quiz has_many users
     - Quiz has_many questions
+    - Question belongs_to quiz
   - ATTRIBUTES
     - question
     - answer
