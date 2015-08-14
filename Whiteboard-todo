@@ -1,0 +1,95 @@
+TODO:
+
++ Detailed explanation of what the product will do; eloquent, silky smooth
++ Naming; something fucking awesome
+- Talk to disability services; ASAP
+- Cold call/email professors - set up meetings
+- Talk to professors
+
++ MVP wireframes
++ Complete MVP; APPROX 100hrs for MVP; avg. 2hrs/day
+- Secure domain name; see naming
+
+ -------------------------------------------------------------
+
+
+"-" = List item
+"+" = Currently working on
+
+- CLEAN UP YOUR ROUTES
+
+- Add functionality to upload an image along with a post
+- Add functionality to upload an image along with a comment
+
+- Add voting to posts
+
+- signin users automatically after signup
+
++ add favoriting posts/threads feature
+  - photos too?
+  - add a [favorite this post] link_to course/show
+  - add a [favotire this post] link_to post/show
+
+- add 'view users in this class' feature
+
+- why are comments not showing on posts when link followed from profile page?
+
+- add email verifications to user registration
+
+- BUG: after subscribing to a course, the course doesn't show up on the landing page for the signed in user
+  - BUT the correct courses show up after logout/login
+
+- fix position of the "You need to subscribe to participate in this course" message
+
+- display uploaded image on post/show and course/show
+
+------------------------------------------
+
+- BUG: navigating to post/show after post errors are thrown, fires errors, no get route (probably because of redirect instead of render)
+  - navigates to "course//post" (no course id)
+
+- display errors for comment
+- after subscribing to a course, redirect to that course
+
+- post photos to comments
+
+- add a resources page ('resources might be a reserved word')
+  - Ability to create new resource objects (midterm 1, 2, 3)
+  - and upload files to those objects
+
+- add admin specification on users
+  - TAs, students, professors
+
+- sidebar when logged in
+  - left: show/link registered courses
+  - right: calendar/todo
+
+- customizing aesthetics
+  - background
+  - rearranging elements
+
+- quizzes
+  - 'quiz'.tableize = 'quizzes'
+  - need one model for quizzes/questions/answers OR need model for each?
+  - look into surveyor gem
+  - ASSOCIATIONS
+    - User has_many quizzes
+    - Quiz has_many users
+    - Quiz has_many questions
+  - ATTRIBUTES
+    - question
+    - answer
+    - grade
+  - ROUTES
+    - quiz#new
+    - quiz#create
+    - quiz#show
+    - quiz#destroy
+  - builder
+    - professors input questions/answers
+  - taking quizzes
+    - randomized questions ('ask for x number of questions about whatever'),
+    - randomized answer order
+  - grading
+    - short answer manually graded
+    - multiple choice automated
