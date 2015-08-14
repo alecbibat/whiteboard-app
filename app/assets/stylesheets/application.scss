@@ -22,6 +22,10 @@
   padding-left: 0px;
 }
 
+.navbar-right {
+  padding-right: 15px;
+}
+
 .quiet {
   color: #ababab;
 }
@@ -40,9 +44,9 @@ div.nav_item {
 
 div.comment_votes {
   padding: 10px;
-}
+};
 
-html body #bgimage{
-background: url('wood_tile.png');
+body {
+background-image: url('wood_tile.png');
 background-repeat: repeat;
     }
