@@ -1,13 +1,16 @@
 class UsersController < ApplicationController
 
   def index
+    @mycoursespage = false
   end
 
   def show
+    @mycoursespage = false
     @user = User.find_by(id: session[:user].id)
   end
 
   def new
+    @mycoursespage = false
     @user = User.new()
   end
 

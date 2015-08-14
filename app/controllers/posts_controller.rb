@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
   def show
+    @mycoursespage = false
     @post = Post.find(params[:id])
     @comment = Comment.new()
   end

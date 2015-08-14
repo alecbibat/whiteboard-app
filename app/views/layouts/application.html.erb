@@ -23,12 +23,28 @@
     </header>
     <div id="main" role="main">
       <div class="container">
+        <% if session[:user] != nil and @mycoursespage == false %>
+          <div class="row">
+            <div class='span2'>
+              <h3 class='lead'>Sidebar</h3>
+              <% session[:user].courses.each do |sub| %>
+              <%= sub.department %>
+              <%= sub.number %>
+              <% end %>
+            </div>
+            <div class="span9">
+              <%= render 'layouts/messages' %>
+              <%= yield %>
+            </div>
+          </div>
+        <% else %>
           <div class="row">
           <div class="span12">
             <%= render 'layouts/messages' %>
             <%= yield %>
           </div>
         </div>
+        <% end %>
         <footer>
         </footer>
       </div> <!--! end of .container -->

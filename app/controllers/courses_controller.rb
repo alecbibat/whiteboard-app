@@ -1,9 +1,11 @@
 class CoursesController < ApplicationController
   def index
+    @mycoursespage = false
     @courses = Course.all
   end
 
   def show
+    @mycoursespage = false
     # handle individual course pages
     if session[:user] == nil
       flash[:error] = "You must be logged in to view a course."
@@ -15,6 +17,7 @@ class CoursesController < ApplicationController
   end
 
   def new
+    @mycoursespage = false
     # handle showing the 'register a new course' form
     @course = Course.new()
   end

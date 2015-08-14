@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+    @mycoursespage = false
   end
 
   def create
