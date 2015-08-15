@@ -2,6 +2,8 @@
 
 <%= render 'shared/header', title: @course.name %>
 
+<p><%= @course.description %></p>
+
 <p class="quiet"> <%= @course.department %> | <%= @course.number %> </p>
 
 <% if @course.subscribed_courses.any? and (@course.subscribed_courses.select {|x| x.user_id == session[:user].id}).any? %>
@@ -11,14 +13,15 @@
   <%= link_to "[Subscribe]", subscribe_path(@course), method: 'post' %>
 <% end %>
 
-
-
 </div>
+
 <div class="span8 well">
 
 <%= render 'shared/errors', obj: @post %>
 
 <% if @course.subscribed_courses.any? and (@course.subscribed_courses.select {|x| x.user_id == session[:user].id}).any? %>
+
+<%= render 'shared/header', title: 'New Post' %>
 
 <%= form_for [@course, @post] do |f| %>
 

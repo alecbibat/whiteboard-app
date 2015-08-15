@@ -25,14 +25,24 @@
       <div class="container">
         <% if session[:user] != nil and @mycoursespage == false %>
           <div class="row">
-            <div class='span2'>
-              <h3 class='lead'>Sidebar</h3>
+            <div class='span2 well'>
+              <h3 class='lead'>My Courses</h3>
+              <ul>
               <% session[:user].courses.each do |sub| %>
               <%= link_to course_path(sub) do %>
+              <li>
               <%= sub.department %>
               <%= sub.number %>
+              </li>
               <% end %>
               <% end %>
+            </ul>
+              <h3 class='lead'>Other Stuff</h3>
+              <p><%= link_to 'Calendar', calendar_path, class: 'btn btn-primary' %></p>
+              <p><%= link_to 'Example', '#', class: 'btn btn-info' %></p>
+              <p><%= link_to 'Example', '#', class: 'btn btn-success' %></p>
+              <p><%= link_to 'Example', '#', class: 'btn btn-warning' %></p>
+              <p><%= link_to 'Example', '#', class: 'btn btn-danger' %></p>
             </div>
             <div class="span9">
               <%= render 'layouts/messages' %>
