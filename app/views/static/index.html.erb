@@ -12,8 +12,9 @@
 </div>
 
 <% else %>
-<%= render 'shared/header', title: 'My Courses' %>
+
 <% if session[:user].courses.any? %>
+<%= render 'shared/header', title: 'My Courses' %>
 <% session[:user].courses.each do |sub| %>
 <div class='span8 well'>
   <%= link_to 'View Course', course_path(sub), class: 'btn btn-info' %> <%= sub.name %> | <%= sub.department %> <%= sub.number %>
