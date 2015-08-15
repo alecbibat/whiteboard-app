@@ -1,5 +1,5 @@
 <div class="span5 well">
-    <p class="lead"><%= @user.username %>
+    <%= render 'shared/header', title: @user.username %>
     <p>Email: <%= @user.email %></p>
     <p>Member since: <%= datetime(@user.created_at) %>
     <p>Posts: <%= @user.posts.size %></p>

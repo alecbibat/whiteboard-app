@@ -12,8 +12,7 @@
 </div>
 
 <% else %>
-<p class='lead'>My Courses</p>
-<hr>
+<%= render 'shared/header', title: 'My Courses' %>
 <% session[:user].courses.each do |sub| %>
 <div class='span8 well'>
   <%= sub %>

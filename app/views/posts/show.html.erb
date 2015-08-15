@@ -3,7 +3,7 @@
 </div>
 
 <div class="span8 well">
-    <h5><%= @post.title %></h5>
+    <%= render 'shared/header', title: @post.title %>
     <div class="control-group">
     <%= image_tag @post.photo_url() %>
     </div>

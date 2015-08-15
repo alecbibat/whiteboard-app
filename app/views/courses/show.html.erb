@@ -1,5 +1,9 @@
 <div class='span8 well'>
 
+<%= render 'shared/header', title: @course.name %>
+
+<p class="quiet"> <%= @course.department %> | <%= @course.number %> </p>
+
 <% if @course.subscribed_courses.any? and (@course.subscribed_courses.select {|x| x.user_id == session[:user].id}).any? %>
 <% @subscribed_courses = @course.subscribed_courses.select {|x| x.user_id == session[:user].id} %>
   <%= link_to "[Unsubscribe]", unsubscribe_path(@subscribed_courses), method: 'delete'%>
@@ -7,9 +11,7 @@
   <%= link_to "[Subscribe]", subscribe_path(@course), method: 'post' %>
 <% end %>
 
-<h4><%= @course.name %></h4>
 
-<p class="quiet"> <%= @course.department %> | <%= @course.number %> </p>
 
 </div>
 <div class="span8 well">

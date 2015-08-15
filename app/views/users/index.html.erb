@@ -1,0 +1,9 @@
+<%= render 'shared/header', title: 'All Users' %>
+
+<%= User.all.each do |user| %>
+	<% link_to user_path(user) do %>
+		<div class='span4 well'>
+		<%= user.username ' | ' user.email ' | ' %>
+		</div>
+	<% end %>
+	<% end %>

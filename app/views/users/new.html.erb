@@ -1,9 +1,8 @@
 <%= render 'shared/errors', obj: @user %>
 
 <div class='span8 well'>
-<div class="lead">
-  Create an Account
-</div>
+
+<%= render 'shared/header', title: 'Register' %>
 
   <%= form_for @user do |f| %>
 
