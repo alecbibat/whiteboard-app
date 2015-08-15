@@ -19,6 +19,7 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:notice] = "You've successfully registered!"
+      session[:user] = @user
       redirect_to root_path
     else
       render :new
