@@ -15,4 +15,13 @@ module ApplicationHelper
     end
   end
 
+  def remove_vowels(str)
+    str = str.tr('a', '')
+    str = str.tr('e', '')
+    str = str.tr('i', '')
+    str = str.tr('o', '')
+    str = str.tr('u', '')
+    return str
+  end
+
 end
