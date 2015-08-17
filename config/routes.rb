@@ -12,6 +12,8 @@ Whiteboards::Application.routes.draw do
     resources :comments
   end 
 
+  post '/courses/:course_id/assignments/new' => 'assignments#create'
+
   post 'post_comments' => 'comments#create'
 
   resources :sessions, only: [:new, :create]
