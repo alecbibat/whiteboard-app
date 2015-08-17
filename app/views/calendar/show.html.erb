@@ -28,6 +28,8 @@ end %>
 
 <p class='lead'><%= @month_name %></p>
 
+<p class='quiet small'><%= @course.name %></p>
+
 <%=
 
 options = { extra_day_classes: lambda { |classes, date|
@@ -38,7 +40,7 @@ options = { extra_day_classes: lambda { |classes, date|
 bootstrap_calendar Date.today, options do |date|
 	params[:id] = date
   content_tag :span, class: "pull-right", "data-cal-date" => "some", "data-cal-view" => "day" do
-    (link_to date.day.to_s, new_calendar_item_path(params[:id]))
+    (link_to date.day.to_s, course_events_path(@course, params[:id]))
   end
 end
 %>

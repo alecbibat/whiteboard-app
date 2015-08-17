@@ -1,9 +1,6 @@
 class CalendarController < ApplicationController
   def show
     @mycoursespage = false
-  end
-
-  def new
-  	@mycoursespage = false
+    @course = Course.find(params[:format])
   end
 end

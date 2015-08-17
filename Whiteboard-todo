@@ -94,3 +94,7 @@ TODO:
   - grading
     - short answer manually graded
     - multiple choice automated
+
++ take the calendar button off the sidebar
+  - put onto course page
+  - course_show >> calendar_show >> new_event
