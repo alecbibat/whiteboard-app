@@ -4,5 +4,6 @@ class CalendarController < ApplicationController
   end
 
   def new
+  	@mycoursespage = false
   end
 end
