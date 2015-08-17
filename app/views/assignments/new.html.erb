@@ -1,0 +1,13 @@
+assignments#new path
+
+<%= form_for :assignments do |f| %>
+
+<%= f.label :title %>
+<%= f.text_field :title %>
+
+<%= f.label :description %>
+<%= f.text_area :description %>
+
+<%= f.submit 'submit', class: 'btn btn-primary' %>
+
+<% end %>

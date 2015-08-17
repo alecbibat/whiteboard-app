@@ -10,7 +10,7 @@ Whiteboards::Application.routes.draw do
 
   resources :posts do
     resources :comments
-  end
+  end 
 
   post 'post_comments' => 'comments#create'
 

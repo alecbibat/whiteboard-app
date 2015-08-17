@@ -1,9 +1,7 @@
-new assignment path
+assignments#index path
 
-<%= remove_dashes(params[:format]) %>
+<%= @date_fix = remove_dashes(@date) %>
 
-<%= form_for :assignment do |f| %>
+<% params[:format] = @date_fix %>
 
-
-
-<% end %>
+<%= link_to 'New Assignment', new_course_assignment_path(@course, @date), class: 'btn btn-success' %>
