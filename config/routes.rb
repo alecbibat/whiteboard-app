@@ -4,7 +4,7 @@ Whiteboards::Application.routes.draw do
   resources :users
 
   resources :courses do
-    resources :events
+    resources :assignments
     resources :posts
   end
 
