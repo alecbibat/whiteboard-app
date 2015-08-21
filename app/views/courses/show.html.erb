@@ -10,6 +10,7 @@
 <% @subscribed_courses = @course.subscribed_courses.select {|x| x.user_id == session[:user].id} %>
   <%= link_to "[Unsubscribe]", unsubscribe_path(@subscribed_courses), method: 'delete'%>
   <%= link_to "New Assignment", new_course_assignment_path(@subscribed_courses), class: 'btn btn-success' %>
+  <%= link_to "Calendar", calendar_path(@course) %>
 <% else %>
   <%= link_to "[Subscribe]", subscribe_path(@course), method: 'post' %>
 <% end %>

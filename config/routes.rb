@@ -20,7 +20,6 @@ Whiteboards::Application.routes.draw do
   delete 'logout' => 'sessions#destroy'
 
   get 'calendar' => 'calendar#show'
-  get 'new_calendar_item' => 'calendar#new'
 
   post 'subscribe' => 'subscribed_courses#create'
   delete 'unsubscribe' => 'subscribed_courses#destroy'

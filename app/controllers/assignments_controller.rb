@@ -1,7 +1,10 @@
 class AssignmentsController < ApplicationController
   def index
-  	@date = params[:format]
-  	@course = Course.find(params[:course_id])
+    # find all assignments associated
+    # with the course that the calendar
+    # is associated with
+    @course = Course.find(params[:course_id])
+    @assignments = @course.assignments.all
   end
 
 def new

@@ -30,6 +30,8 @@ end %>
 
 <p class='quiet small'><%= @course.name %></p>
 
+<%= link_to 'View all assignments', course_assignments_path(@course) %>
+
 <%=
 
 options = { extra_day_classes: lambda { |classes, date|
