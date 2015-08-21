@@ -1,8 +1,13 @@
-assignments#index path
+<p class='lead'>All assignments for <%= @course.name %></p>
 
-
+<% if @assignments.any? %>
 <ul>
 <% @assignments.each do |assignment| %>
+	<div class="span8 well">
 	<li><%= assignment %></li>
+	</div>
 <% end %>
 </ul>
+<% else %>
+<p>There's nothing here!</p>
+<% end %>

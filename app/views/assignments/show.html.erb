@@ -1,5 +1,11 @@
-assignments#show path
+<p>All assignments for <%= @course.name %> on <%= @raw_date %></p>
 
+<% if @assignments.any? %>
 <% @assignments.each do |assignment| %>
-<%= assignment %>
+  <div class="span8 well">
+  <%= assignment %>
+  </div>
+<% end %>
+<% else %>
+<p>There's nothing here!</p>
 <% end %>

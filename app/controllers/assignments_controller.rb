@@ -17,7 +17,6 @@ def show
   @course = Course.find(params[:course_id])
   @raw_date = params[:id]
   @date = remove_dashes(@raw_date).to_i
-  binding.pry
   @assignments = Assignment.where(:date=>(@date),:course_id=>(@course.id))
 end
 
