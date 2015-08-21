@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150817203908) do
+ActiveRecord::Schema.define(version: 20150821225612) do
 
   create_table "assignments", force: :cascade do |t|
     t.integer  "date"
@@ -50,6 +50,15 @@ ActiveRecord::Schema.define(version: 20150817203908) do
     t.integer  "user_id"
     t.integer  "course_id"
     t.string   "photo",       limit: 255
+  end
+
+  create_table "resources", force: :cascade do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "photo"
+    t.string   "category"
+    t.text     "body"
+    t.integer  "course_id"
   end
 
   create_table "sessions", force: :cascade do |t|

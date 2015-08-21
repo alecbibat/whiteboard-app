@@ -6,6 +6,7 @@ Whiteboards::Application.routes.draw do
   resources :courses do
     resources :assignments
     resources :posts
+    resources :resources
   end
 
   resources :posts do
