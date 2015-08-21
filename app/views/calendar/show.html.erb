@@ -42,7 +42,7 @@ options = { extra_day_classes: lambda { |classes, date|
 bootstrap_calendar Date.today, options do |date|
 	params[:id] = date
   content_tag :span, class: "pull-right", "data-cal-date" => "some", "data-cal-view" => "day" do
-    (link_to date.day.to_s, course_assignments_path(@course, params[:id]))
+    (link_to date.day.to_s, course_assignment_path(@course, params[:id]))
   end
 end
 %>

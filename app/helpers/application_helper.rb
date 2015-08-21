@@ -26,7 +26,6 @@ module ApplicationHelper
 
   def remove_dashes(str)
     str = str.tr('-', '')
-    str = str.to_i
     return str
   end
 
