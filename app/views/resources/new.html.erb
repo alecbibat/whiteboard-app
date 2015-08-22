@@ -1,4 +1,16 @@
 resource new
 
-<%= form_for @resource do |f| %>
+<%= form_for [@course, @resource] do |f| %>
+
+<%= f.label :category %>
+<%= f.text_field :category %>
+
+<%= f.label :body %>
+<%= f.text_area :body %>
+
+<%= f.label :url %>
+<%= f.text_field :url %>
+
+<%= f.submit "Add Resource", class: 'btn btn-success' %>
+
 <% end %>
