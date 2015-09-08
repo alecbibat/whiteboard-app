@@ -2,8 +2,11 @@
 
 <%= link_to "New Resource", new_course_resource_path(@course), class: 'btn btn-success' %>
 
-<% @course.resources.each do |resource| %>
+<p><% @course.resources.each do |resource| %>
 <div class='span8 well'>
-  <%= resource %>
+  <%= resource.category %>
+  <%= resource.body %>
+  <%= resource.url %>
+  <%= link_to 'file', resource.photo %>
 </div>
-<% end %>
+<% end %></p>

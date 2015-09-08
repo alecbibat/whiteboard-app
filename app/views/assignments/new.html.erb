@@ -1,16 +1,22 @@
-assignments#new path
-
 <%= form_for :assignment do |f| %>
 
+<div class='control-group'>
 <%= f.label :title %>
 <%= f.text_field :title %>
+</div>
 
+<div class='control-group'>
 <%= f.label :description %>
 <%= f.text_area :description %>
+</div>
 
+<div class='control-group'>
 <%= f.label :date %>
 <%= f.text_field :date %>
+</div>
 
+<div class='control-group'>
 <%= f.submit 'submit', class: 'btn btn-primary' %>
+</div>
 
 <% end %>

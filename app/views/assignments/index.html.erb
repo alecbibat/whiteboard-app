@@ -4,7 +4,9 @@
 <ul>
 <% @assignments.each do |assignment| %>
 	<div class="span8 well">
-	<li><%= assignment %></li>
+     <strong><%= assignment.title.capitalize %></strong>
+	   <p><%= assignment.description.capitalize %></p>
+     <p class='quiet'>posted on: <%= assignment.updated_at %></p>
 	</div>
 <% end %>
 </ul>

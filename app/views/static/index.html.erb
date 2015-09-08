@@ -17,7 +17,7 @@
 <%= render 'shared/header', title: 'My Courses' %>
 <% session[:user].courses.each do |sub| %>
 <div class='span8 well'>
-  <%= link_to 'View Course', course_path(sub), class: 'btn btn-info' %> <%= sub.name %> | <%= sub.department %> <%= sub.number %>
+  <%= sub.name %> | <%= sub.department %> <%= sub.number %> <%= link_to 'View Course', course_path(sub) %>
 </div>
 <% end %>
 
@@ -25,6 +25,7 @@
 <div class='span8 well'>
   <p>You're not registered for any courses.</p>
   <p>To view available courses, go <%= link_to 'here', courses_path %>.</p>
+  <p class='quiet'>(If you've registered for a course, logout then login to show your newly registered courses.)</p>
 </div>
 <% end %>
 <% end %>
