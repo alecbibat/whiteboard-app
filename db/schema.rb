@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150822012727) do
+ActiveRecord::Schema.define(version: 20150915055023) do
 
   create_table "assignments", force: :cascade do |t|
     t.integer  "date"
@@ -86,6 +86,11 @@ ActiveRecord::Schema.define(version: 20150822012727) do
     t.integer  "user_course_id"
     t.string   "email",           limit: 255
     t.string   "password_digest", limit: 255
+  end
+
+  create_table "whiteboards", force: :cascade do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

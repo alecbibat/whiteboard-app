@@ -2,6 +2,8 @@ class UsersController < ApplicationController
 
   def index
     @mycoursespage = false
+    @course = Course.find(params[:format])
+    @users = User.all
   end
 
   def show

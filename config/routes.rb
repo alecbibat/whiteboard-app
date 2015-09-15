@@ -7,11 +7,12 @@ Whiteboards::Application.routes.draw do
     resources :assignments
     resources :posts
     resources :resources
+    resources :whiteboards
   end
 
   resources :posts do
     resources :comments
-  end 
+  end
 
   post '/courses/:course_id/assignments/new' => 'assignments#create'
 
